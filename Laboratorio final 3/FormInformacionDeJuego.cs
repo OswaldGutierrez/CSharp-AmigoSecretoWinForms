@@ -15,7 +15,12 @@ namespace Laboratorio_final_3
         public FormInformacionDeJuego()
         {
             InitializeComponent();
+
             labelCantidadDeJugadores.Text = FormPrincipal.txt1;
+            labelNumeroDeEndulzadas.Text = FormPrincipal.txt2;
+            labelFrecuenciaDeEndulzadas.Text = FormPrincipal.txt3;
+            labelValorEndulzada.Text = FormPrincipal.txt4;
+            labelValorRegalo.Text = FormPrincipal.txt5;
         }
 
         private void FormInformacionDeJuego_Load(object sender, EventArgs e)
