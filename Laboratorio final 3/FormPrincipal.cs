@@ -30,6 +30,10 @@ namespace Laboratorio_final_3
             amigoSecreto = new AmigoSecreto();
         }
 
+
+        /**
+         * Al hacer click en este botón, aparecerá una nueva interfaz que mostrará la información ingresada por el usuario.
+         */
         private void buttonInformacionDeJuego_Click(object sender, EventArgs e)
         {
             txt1 = textBoxCantidadDeJugadores.Text;
@@ -44,8 +48,6 @@ namespace Laboratorio_final_3
 
         private void buttonProximaEndulzada_Click(object sender, EventArgs e)
         {
-
-
             // Obtener los valores de Fecha de Inicio, Número de Endulzadas y Frecuencia de Endulzadas
             DateTime fechaInicio = dateFechaDeInicio.Value; // Suponiendo que tengas un DateTimePicker en FormPrincipal
             int numeroEndulzadas = int.Parse(textBoxNumeroDeEndulzadas.Text); // Suponiendo que el número se muestra en un TextBox
@@ -58,6 +60,10 @@ namespace Laboratorio_final_3
             formProximaEndulzada.Show();
         }
 
+
+        /**
+         * Permite al usuario especificar la cantidad de jugadores que desea crear y luego los muestra una lista de los jugadores en un cuadro de diálogo.
+         */
         private void buttonCrearJugadores_Click(object sender, EventArgs e)
         {
 
@@ -85,15 +91,16 @@ namespace Laboratorio_final_3
             {
                 MessageBox.Show("Por favor, ingrese un número válido en el TextBox.");
             }
-
         }
 
+
+        /**
+         * Permite asignar amigos secretos a los jugadores creados anteriormente, siempre y cuando se hayan creado los jugadores previamente.
+         */
         private void buttonAsignarAmigosSecretos_Click(object sender, EventArgs e)
         {
-            // Asegúrate de que los jugadores hayan sido creados previamente en la instancia de AmigoSecreto
             if (amigoSecreto.Jugadores != null)
             {
-                // Llama a la función de la instancia de AmigoSecreto para asignar amigos secretos
                 amigoSecreto.AsignarAmigosSecretos();
 
                 MessageBox.Show("Amigos secretos asignados con éxito.");
