@@ -46,6 +46,7 @@
             this.buttonInformacionDeJuego = new System.Windows.Forms.Button();
             this.buttonProximaEndulzada = new System.Windows.Forms.Button();
             this.buttonCrearJugadores = new System.Windows.Forms.Button();
+            this.buttonAsignarAmigosSecretos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -171,7 +172,7 @@
             // 
             // buttonInformacionDeJuego
             // 
-            this.buttonInformacionDeJuego.Location = new System.Drawing.Point(800, 21);
+            this.buttonInformacionDeJuego.Location = new System.Drawing.Point(809, 82);
             this.buttonInformacionDeJuego.Name = "buttonInformacionDeJuego";
             this.buttonInformacionDeJuego.Size = new System.Drawing.Size(175, 23);
             this.buttonInformacionDeJuego.TabIndex = 24;
@@ -181,7 +182,7 @@
             // 
             // buttonProximaEndulzada
             // 
-            this.buttonProximaEndulzada.Location = new System.Drawing.Point(800, 82);
+            this.buttonProximaEndulzada.Location = new System.Drawing.Point(809, 250);
             this.buttonProximaEndulzada.Name = "buttonProximaEndulzada";
             this.buttonProximaEndulzada.Size = new System.Drawing.Size(175, 23);
             this.buttonProximaEndulzada.TabIndex = 25;
@@ -191,7 +192,7 @@
             // 
             // buttonCrearJugadores
             // 
-            this.buttonCrearJugadores.Location = new System.Drawing.Point(800, 148);
+            this.buttonCrearJugadores.Location = new System.Drawing.Point(809, 30);
             this.buttonCrearJugadores.Name = "buttonCrearJugadores";
             this.buttonCrearJugadores.Size = new System.Drawing.Size(175, 23);
             this.buttonCrearJugadores.TabIndex = 26;
@@ -199,11 +200,22 @@
             this.buttonCrearJugadores.UseVisualStyleBackColor = true;
             this.buttonCrearJugadores.Click += new System.EventHandler(this.buttonCrearJugadores_Click);
             // 
+            // buttonAsignarAmigosSecretos
+            // 
+            this.buttonAsignarAmigosSecretos.Location = new System.Drawing.Point(809, 134);
+            this.buttonAsignarAmigosSecretos.Name = "buttonAsignarAmigosSecretos";
+            this.buttonAsignarAmigosSecretos.Size = new System.Drawing.Size(175, 23);
+            this.buttonAsignarAmigosSecretos.TabIndex = 27;
+            this.buttonAsignarAmigosSecretos.Text = "Asignar amigos secretos";
+            this.buttonAsignarAmigosSecretos.UseVisualStyleBackColor = true;
+            this.buttonAsignarAmigosSecretos.Click += new System.EventHandler(this.buttonAsignarAmigosSecretos_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 566);
+            this.Controls.Add(this.buttonAsignarAmigosSecretos);
             this.Controls.Add(this.buttonCrearJugadores);
             this.Controls.Add(this.buttonProximaEndulzada);
             this.Controls.Add(this.buttonInformacionDeJuego);
@@ -249,6 +261,7 @@
         private System.Windows.Forms.Button buttonInformacionDeJuego;
         private System.Windows.Forms.Button buttonProximaEndulzada;
         private System.Windows.Forms.Button buttonCrearJugadores;
+        private System.Windows.Forms.Button buttonAsignarAmigosSecretos;
     }
 }
 

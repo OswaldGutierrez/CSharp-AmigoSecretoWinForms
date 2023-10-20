@@ -63,6 +63,7 @@ namespace Laboratorio_final_3
 
             if (int.TryParse(textBoxCantidadDeJugadores.Text, out int cantidad))
             {
+                // Llama a la función de la instancia de AmigoSecreto para crear jugadores
                 Jugador[] jugadores = amigoSecreto.CrearJugadores(cantidad);
 
                 if (jugadores != null)
@@ -85,6 +86,22 @@ namespace Laboratorio_final_3
                 MessageBox.Show("Por favor, ingrese un número válido en el TextBox.");
             }
 
+        }
+
+        private void buttonAsignarAmigosSecretos_Click(object sender, EventArgs e)
+        {
+            // Asegúrate de que los jugadores hayan sido creados previamente en la instancia de AmigoSecreto
+            if (amigoSecreto.Jugadores != null)
+            {
+                // Llama a la función de la instancia de AmigoSecreto para asignar amigos secretos
+                amigoSecreto.AsignarAmigosSecretos();
+
+                MessageBox.Show("Amigos secretos asignados con éxito.");
+            }
+            else
+            {
+                MessageBox.Show("Primero debes crear los jugadores antes de asignar amigos secretos.");
+            }
         }
     }
 }

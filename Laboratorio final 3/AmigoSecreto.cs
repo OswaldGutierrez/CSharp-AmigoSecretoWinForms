@@ -50,18 +50,20 @@ namespace Laboratorio_final_3
 
         public Jugador[] CrearJugadores(int cantidad)
         {
-            Jugador[] jugadores = new Jugador[cantidad];
+            Jugadores = new Jugador[cantidad]; // Inicializa la propiedad Jugadores
+
             for (int i = 0; i < cantidad; i++)
             {
-                // Aquí creas cada jugador de acuerdo a tus necesidades, utilizando valores genéricos o personalizados.
+                // Crea y almacena cada jugador en la propiedad Jugadores
                 string nombre = "Jugador " + (i + 1);
                 string correo = "jugador" + (i + 1) + "@correo.com";
                 string endulzadaIdeal = "Endulzada Ideal " + (i + 1);
                 string regaloIdeal = "Regalo Ideal " + (i + 1);
 
-                jugadores[i] = new Jugador(nombre, correo, endulzadaIdeal, regaloIdeal);
+                Jugadores[i] = new Jugador(nombre, correo, endulzadaIdeal, regaloIdeal);
             }
-            return jugadores;
+
+            return Jugadores;
         }
 
 
@@ -97,27 +99,33 @@ namespace Laboratorio_final_3
         public void AsignarAmigosSecretos()
         {
 
-            // Crea una copia desordenada de la lista de jugadores
-            List<Jugador> jugadoresDesordenados = new List<Jugador>(Jugadores);
-            Random rng = new Random();
-
-            int n = jugadoresDesordenados.Count;
-            while (n > 1)
+            if (Jugadores == null || Jugadores.Length < 2)
             {
-                n--;
-                int k = rng.Next(n + 1);
-                Jugador temp = jugadoresDesordenados[k];
-                jugadoresDesordenados[k] = jugadoresDesordenados[n];
-                jugadoresDesordenados[n] = temp;
+                MessageBox.Show("No hay suficientes jugadores para asignar amigos secretos.");
+                return;
             }
 
-            // Asignar amigos secretos y enviar correos electrónicos
-            for (int i = 0; i < jugadoresDesordenados.Count; i++)
-            {
-                Jugador jugadorActual = jugadoresDesordenados[i];
-                Jugador amigoSecreto = jugadoresDesordenados[(i + 1) % jugadoresDesordenados.Count];
+            Random rng = new Random();
+            List<int> disponibles = Enumerable.Range(0, Jugadores.Length).ToList();
 
-                jugadorActual.AmigoSecreto = amigoSecreto.ToString();
+            for (int i = 0; i < Jugadores.Length; i++)
+            {
+                Jugador jugadorActual = Jugadores[i];
+
+                // Evita que el jugador se asigne a sí mismo como amigo secreto
+                int indiceAmigoSecreto;
+                do
+                {
+                    indiceAmigoSecreto = disponibles[rng.Next(disponibles.Count)];
+                } while (indiceAmigoSecreto == i);
+
+                Jugador amigoSecreto = Jugadores[indiceAmigoSecreto];
+
+                // Agrega información de amigos secretos al mensaje
+                MessageBox.Show($"{jugadorActual.Nombre} es el amigo secreto de {amigoSecreto.Nombre}");
+
+                // Remueve el índice asignado de la lista de disponibles
+                disponibles.Remove(indiceAmigoSecreto);
             }
 
         }
