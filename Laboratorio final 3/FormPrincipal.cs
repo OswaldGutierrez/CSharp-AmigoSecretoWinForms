@@ -163,5 +163,10 @@ namespace Laboratorio_final_3
         e.Handled = true;
     }
         }
+
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
