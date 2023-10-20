@@ -26,20 +26,58 @@ namespace Laboratorio_final_3
 
         public Jugador[] Jugadores { get; set; }
 
-
+        public AmigoSecreto()
+        {
+            
+        }
 
         // Creamos un constructor para la clase 'AmigoSecreto'
         public AmigoSecreto(int cantidadJugadores, DateTime fechaInicio, DateTime fechaFin, int numeroEndulzadas, int frecuenciaEndulzadasDias, double valorEndulzada, double valorRegalo)
         {
-            CantidadDeJugadores = cantidadJugadores;
-            FechaDeInicio = fechaInicio;
-            FechaDeDescubrimiento = fechaFin;
-            NumeroDeEndulzadas = numeroEndulzadas;
-            FrecuenciaDeEndulzadas = frecuenciaEndulzadasDias;
-            ValorDeEndulzadas = valorEndulzada;
-            ValorDeRegalo = valorRegalo;
-            Jugadores = new Jugador[cantidadJugadores];
+            this.CantidadDeJugadores = cantidadJugadores;
+            this.FechaDeInicio = fechaInicio;
+            this.FechaDeDescubrimiento = fechaFin;
+            this.NumeroDeEndulzadas = numeroEndulzadas;
+            this.FrecuenciaDeEndulzadas = frecuenciaEndulzadasDias;
+            this.ValorDeEndulzadas = valorEndulzada;
+            this.ValorDeRegalo = valorRegalo;
+            this.Jugadores = new Jugador[cantidadJugadores];
         }
+
+
+
+
+
+        public Jugador[] CrearJugadores(int cantidad)
+        {
+            Jugador[] jugadores = new Jugador[cantidad];
+            for (int i = 0; i < cantidad; i++)
+            {
+                // Aquí creas cada jugador de acuerdo a tus necesidades, utilizando valores genéricos o personalizados.
+                string nombre = "Jugador " + (i + 1);
+                string correo = "jugador" + (i + 1) + "@correo.com";
+                string endulzadaIdeal = "Endulzada Ideal " + (i + 1);
+                string regaloIdeal = "Regalo Ideal " + (i + 1);
+
+                jugadores[i] = new Jugador(nombre, correo, endulzadaIdeal, regaloIdeal);
+            }
+            return jugadores;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         public void AsignarJugadores(Jugador[] jugadores)

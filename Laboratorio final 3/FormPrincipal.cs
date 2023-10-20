@@ -13,6 +13,11 @@ namespace Laboratorio_final_3
     public partial class FormPrincipal : Form
     {
 
+        AmigoSecreto amigoSecreto;
+        private FormProximaEndulzada formProximaEndulzada;
+
+
+        // Creamos textos para mostrarlos
         public static string txt1 = "";
         public static string txt2 = "";
         public static string txt3 = "";
@@ -22,6 +27,7 @@ namespace Laboratorio_final_3
         public FormPrincipal()
         {
             InitializeComponent();
+            amigoSecreto = new AmigoSecreto();
         }
 
         private void buttonInformacionDeJuego_Click(object sender, EventArgs e)
@@ -33,6 +39,52 @@ namespace Laboratorio_final_3
             txt5 = textBoxValorDeRegalo.Text;
 
             new FormInformacionDeJuego().ShowDialog();
+        }
+
+
+        private void buttonProximaEndulzada_Click(object sender, EventArgs e)
+        {
+
+
+            // Obtener los valores de Fecha de Inicio, Número de Endulzadas y Frecuencia de Endulzadas
+            DateTime fechaInicio = dateFechaDeInicio.Value; // Suponiendo que tengas un DateTimePicker en FormPrincipal
+            int numeroEndulzadas = int.Parse(textBoxNumeroDeEndulzadas.Text); // Suponiendo que el número se muestra en un TextBox
+            int frecuenciaEndulzadas = int.Parse(textBoxFrecuenciaDeEndulzadas.Text); // Suponiendo que la frecuencia se muestra en un TextBox
+
+            // Crear una nueva instancia de FormProximaEndulzada y pasar los valores como argumentos
+            FormProximaEndulzada formProximaEndulzada = new FormProximaEndulzada(fechaInicio, numeroEndulzadas, frecuenciaEndulzadas);
+
+            // Mostrar la ventana de FormProximaEndulzada
+            formProximaEndulzada.Show();
+        }
+
+        private void buttonCrearJugadores_Click(object sender, EventArgs e)
+        {
+
+            if (int.TryParse(textBoxCantidadDeJugadores.Text, out int cantidad))
+            {
+                Jugador[] jugadores = amigoSecreto.CrearJugadores(cantidad);
+
+                if (jugadores != null)
+                {
+                    string mensaje = "Jugadores creados:\n";
+                    foreach (Jugador jugador in jugadores)
+                    {
+                        mensaje += jugador.mostrarJugador() + "\n";
+                    }
+
+                    MessageBox.Show(mensaje, "Jugadores Creados");
+                }
+                else
+                {
+                    MessageBox.Show("La creación de jugadores ha fallado.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese un número válido en el TextBox.");
+            }
+
         }
     }
 }

@@ -44,6 +44,8 @@
             this.buttonComenzar = new System.Windows.Forms.Button();
             this.textBoxCantidadDeJugadores = new System.Windows.Forms.TextBox();
             this.buttonInformacionDeJuego = new System.Windows.Forms.Button();
+            this.buttonProximaEndulzada = new System.Windows.Forms.Button();
+            this.buttonCrearJugadores = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -169,7 +171,7 @@
             // 
             // buttonInformacionDeJuego
             // 
-            this.buttonInformacionDeJuego.Location = new System.Drawing.Point(814, 25);
+            this.buttonInformacionDeJuego.Location = new System.Drawing.Point(800, 21);
             this.buttonInformacionDeJuego.Name = "buttonInformacionDeJuego";
             this.buttonInformacionDeJuego.Size = new System.Drawing.Size(175, 23);
             this.buttonInformacionDeJuego.TabIndex = 24;
@@ -177,11 +179,33 @@
             this.buttonInformacionDeJuego.UseVisualStyleBackColor = true;
             this.buttonInformacionDeJuego.Click += new System.EventHandler(this.buttonInformacionDeJuego_Click);
             // 
+            // buttonProximaEndulzada
+            // 
+            this.buttonProximaEndulzada.Location = new System.Drawing.Point(800, 82);
+            this.buttonProximaEndulzada.Name = "buttonProximaEndulzada";
+            this.buttonProximaEndulzada.Size = new System.Drawing.Size(175, 23);
+            this.buttonProximaEndulzada.TabIndex = 25;
+            this.buttonProximaEndulzada.Text = "Próxima endulzada";
+            this.buttonProximaEndulzada.UseVisualStyleBackColor = true;
+            this.buttonProximaEndulzada.Click += new System.EventHandler(this.buttonProximaEndulzada_Click);
+            // 
+            // buttonCrearJugadores
+            // 
+            this.buttonCrearJugadores.Location = new System.Drawing.Point(800, 148);
+            this.buttonCrearJugadores.Name = "buttonCrearJugadores";
+            this.buttonCrearJugadores.Size = new System.Drawing.Size(175, 23);
+            this.buttonCrearJugadores.TabIndex = 26;
+            this.buttonCrearJugadores.Text = "Crear jugadores";
+            this.buttonCrearJugadores.UseVisualStyleBackColor = true;
+            this.buttonCrearJugadores.Click += new System.EventHandler(this.buttonCrearJugadores_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 566);
+            this.Controls.Add(this.buttonCrearJugadores);
+            this.Controls.Add(this.buttonProximaEndulzada);
             this.Controls.Add(this.buttonInformacionDeJuego);
             this.Controls.Add(this.textBoxCantidadDeJugadores);
             this.Controls.Add(this.buttonComenzar);
@@ -223,6 +247,8 @@
         private System.Windows.Forms.Button buttonComenzar;
         private System.Windows.Forms.TextBox textBoxCantidadDeJugadores;
         private System.Windows.Forms.Button buttonInformacionDeJuego;
+        private System.Windows.Forms.Button buttonProximaEndulzada;
+        private System.Windows.Forms.Button buttonCrearJugadores;
     }
 }
 
