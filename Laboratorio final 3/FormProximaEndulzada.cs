@@ -26,6 +26,14 @@ namespace Laboratorio_final_3
             FechaInicio = fechaInicio;
             NumeroEndulzadas = numeroEndulzadas;
             FrecuenciaEndulzadas = frecuenciaEndulzadas;
+
+            // Inicializar la instancia de AmigoSecreto
+            amigoSecreto = new AmigoSecreto();
+
+            // Configurar los valores en la instancia de AmigoSecreto
+            amigoSecreto.FechaDeInicio = FechaInicio;
+            amigoSecreto.NumeroDeEndulzadas = NumeroEndulzadas;
+            amigoSecreto.FrecuenciaDeEndulzadas = FrecuenciaEndulzadas;
         }
 
         public FormProximaEndulzada()
@@ -35,10 +43,14 @@ namespace Laboratorio_final_3
 
         private void buttonCalcularProxEndulzada_Click(object sender, EventArgs e)
         {
-            amigoSecreto = new AmigoSecreto();
-            amigoSecreto.DiasHastaProximaEndulzada(dateCalcularFecha.Value);
+            // Obtén la fecha ingresada por el usuario en el DateTimePicker
+            DateTime fechaIngresada = dateCalcularFecha.Value;
 
+            // Llama a la función de AmigoSecreto para calcular los días hasta la próxima endulzada
+            int diasHastaProximaEndulzada = amigoSecreto.DiasHastaProximaEndulzada(fechaIngresada);
 
+            // Muestra un mensaje con la cantidad de días
+            MessageBox.Show($"Días hasta la próxima endulzada: {diasHastaProximaEndulzada}");
         }
     }
 }

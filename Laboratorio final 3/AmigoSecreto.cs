@@ -107,6 +107,7 @@ namespace Laboratorio_final_3
 
             Random rng = new Random();
             List<int> disponibles = Enumerable.Range(0, Jugadores.Length).ToList();
+            StringBuilder mensaje = new StringBuilder("Asignación de Amigos Secretos:\n");
 
             for (int i = 0; i < Jugadores.Length; i++)
             {
@@ -122,11 +123,13 @@ namespace Laboratorio_final_3
                 Jugador amigoSecreto = Jugadores[indiceAmigoSecreto];
 
                 // Agrega información de amigos secretos al mensaje
-                MessageBox.Show($"{jugadorActual.Nombre} es el amigo secreto de {amigoSecreto.Nombre}");
+                mensaje.AppendLine($"{jugadorActual.Nombre} es el amigo secreto de {amigoSecreto.Nombre}");
 
                 // Remueve el índice asignado de la lista de disponibles
                 disponibles.Remove(indiceAmigoSecreto);
             }
+
+            MessageBox.Show(mensaje.ToString(), "Asignación de Amigos Secretos");
 
         }
 

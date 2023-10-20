@@ -41,7 +41,6 @@
             this.textBoxValorDeRegalo = new System.Windows.Forms.TextBox();
             this.textBoxValorDeEndulzadas = new System.Windows.Forms.TextBox();
             this.dateFechaDeDescubrimiento = new System.Windows.Forms.DateTimePicker();
-            this.buttonComenzar = new System.Windows.Forms.Button();
             this.textBoxCantidadDeJugadores = new System.Windows.Forms.TextBox();
             this.buttonInformacionDeJuego = new System.Windows.Forms.Button();
             this.buttonProximaEndulzada = new System.Windows.Forms.Button();
@@ -154,15 +153,6 @@
             this.dateFechaDeDescubrimiento.Size = new System.Drawing.Size(200, 20);
             this.dateFechaDeDescubrimiento.TabIndex = 17;
             // 
-            // buttonComenzar
-            // 
-            this.buttonComenzar.Location = new System.Drawing.Point(26, 424);
-            this.buttonComenzar.Name = "buttonComenzar";
-            this.buttonComenzar.Size = new System.Drawing.Size(138, 23);
-            this.buttonComenzar.TabIndex = 22;
-            this.buttonComenzar.Text = "Comenzar juego.";
-            this.buttonComenzar.UseVisualStyleBackColor = true;
-            // 
             // textBoxCantidadDeJugadores
             // 
             this.textBoxCantidadDeJugadores.Location = new System.Drawing.Point(247, 23);
@@ -182,7 +172,7 @@
             // 
             // buttonProximaEndulzada
             // 
-            this.buttonProximaEndulzada.Location = new System.Drawing.Point(809, 250);
+            this.buttonProximaEndulzada.Location = new System.Drawing.Point(809, 195);
             this.buttonProximaEndulzada.Name = "buttonProximaEndulzada";
             this.buttonProximaEndulzada.Size = new System.Drawing.Size(175, 23);
             this.buttonProximaEndulzada.TabIndex = 25;
@@ -196,7 +186,7 @@
             this.buttonCrearJugadores.Name = "buttonCrearJugadores";
             this.buttonCrearJugadores.Size = new System.Drawing.Size(175, 23);
             this.buttonCrearJugadores.TabIndex = 26;
-            this.buttonCrearJugadores.Text = "Crear jugadores";
+            this.buttonCrearJugadores.Text = "Crear jugadores y sus gustos";
             this.buttonCrearJugadores.UseVisualStyleBackColor = true;
             this.buttonCrearJugadores.Click += new System.EventHandler(this.buttonCrearJugadores_Click);
             // 
@@ -220,7 +210,6 @@
             this.Controls.Add(this.buttonProximaEndulzada);
             this.Controls.Add(this.buttonInformacionDeJuego);
             this.Controls.Add(this.textBoxCantidadDeJugadores);
-            this.Controls.Add(this.buttonComenzar);
             this.Controls.Add(this.textBoxNumeroDeEndulzadas);
             this.Controls.Add(this.textBoxFrecuenciaDeEndulzadas);
             this.Controls.Add(this.textBoxValorDeRegalo);
@@ -256,7 +245,6 @@
         private System.Windows.Forms.TextBox textBoxValorDeRegalo;
         private System.Windows.Forms.TextBox textBoxValorDeEndulzadas;
         private System.Windows.Forms.DateTimePicker dateFechaDeDescubrimiento;
-        private System.Windows.Forms.Button buttonComenzar;
         private System.Windows.Forms.TextBox textBoxCantidadDeJugadores;
         private System.Windows.Forms.Button buttonInformacionDeJuego;
         private System.Windows.Forms.Button buttonProximaEndulzada;
