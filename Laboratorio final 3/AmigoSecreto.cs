@@ -10,13 +10,18 @@ namespace Laboratorio_final_3
     internal class AmigoSecreto
     {
 
-        public int CantidadDeJugadores { get; set; }                        // Propiedad que almacena la cantidad de jugadores
+        /**
+         * Creamos las diferentes propiedades para gestionar la información y el estado del juego 'Amigo Secreto'.
+         * Estas propiedades nos permiten configurar los parámetros del juego, realizar cálculos y hacer un seguimiento de los jugadores.
+         * Estas propiedades representan los atributos y valores necesarios para administrar el juego.
+         */
+        public int CantidadDeJugadores { get; set; }
 
-        public DateTime FechaDeInicio { get; set; }                         // Fecha en la que comienza el juego
+        public DateTime FechaDeInicio { get; set; }
 
-        public DateTime FechaDeDescubrimiento { get; set; }                 // Fecha en que se revelan su amigo secreto
+        public DateTime FechaDeDescubrimiento { get; set; }
 
-        public int NumeroDeEndulzadas { get; set; }                         // Almacena el número de veces que se darán endulzadas
+        public int NumeroDeEndulzadas { get; set; }
 
         public int FrecuenciaDeEndulzadas { get; set; }
 
@@ -26,10 +31,13 @@ namespace Laboratorio_final_3
 
         public Jugador[] Jugadores { get; set; }
 
+
+
         public AmigoSecreto()
         {
             
         }
+
 
         // Creamos un constructor para la clase 'AmigoSecreto'
         public AmigoSecreto(int cantidadJugadores, DateTime fechaInicio, DateTime fechaFin, int numeroEndulzadas, int frecuenciaEndulzadasDias, double valorEndulzada, double valorRegalo)
@@ -45,9 +53,9 @@ namespace Laboratorio_final_3
         }
 
 
-
-
-
+        /**
+         * Función para poder crear y almacenar jugadores en el juego 'Amigo Secreto'
+         */
         public Jugador[] CrearJugadores(int cantidad)
         {
             Jugadores = new Jugador[cantidad]; // Inicializa la propiedad Jugadores
@@ -67,21 +75,9 @@ namespace Laboratorio_final_3
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        /**
+         * Esta función se encarga de tomar un conjunto de jugadores y asignarlos al juego 'Amigo Secreto'
+         */
         public void AsignarJugadores(Jugador[] jugadores)
         {
             if (jugadores.Length == CantidadDeJugadores)
@@ -93,6 +89,7 @@ namespace Laboratorio_final_3
                 Console.WriteLine("La cantidad de jugadores no coincide con la cantidad especificada en el juego.");
             }
         }
+
 
 
         // Creamos un método que se encargue de asignar amigos secretos a los jugadores del juego y simular el envío de correos electrónicos
@@ -133,7 +130,9 @@ namespace Laboratorio_final_3
 
         }
 
-
+        /**
+         * Función que se encarga de mostrar la información relevante del juego.
+         */
         public void ImprimirInformacionJuego()
         {
             MessageBox.Show($"Fecha de Inicio: {FechaDeInicio}\n" +
@@ -145,19 +144,27 @@ namespace Laboratorio_final_3
         }
 
 
-
+        /**
+         * Esta función recorre todos los jugadores almacenados en la propiedad 'Jugadores0 y muestra sus gustos.
+         * También muestra el nombre, el gusto de endulzada y el regalo.
+         */
         public void ImprimirGustosJugadores()
         {
             foreach (Jugador jugador in Jugadores)
             {
                 string mensaje = $"Jugador: {jugador.Nombre}\n" +
-                                 $"Gusto Endulzada Ideal: {jugador.EndulzadaIdeal}\n" +
-                                 $"Gusto Regalo Ideal: {jugador.RegaloIdeal}\n";
+                                 $"Dulcesito ideal: {jugador.EndulzadaIdeal}\n" +
+                                 $"Regalito ideal: {jugador.RegaloIdeal}\n";
 
                 MessageBox.Show(mensaje, "Gustos del Jugador");
             }
         }
 
+
+
+        /**
+         * Funcion que calcula el número de días hasta la próxima endulzada.
+         */
         public int DiasHastaProximaEndulzada(DateTime fechaActual)
         {
             // Calcula la diferencia en días entre la fecha actual y la fecha de inicio del juego
@@ -174,6 +181,5 @@ namespace Laboratorio_final_3
 
             return diasRestantes;
         }
-
     }
 }
