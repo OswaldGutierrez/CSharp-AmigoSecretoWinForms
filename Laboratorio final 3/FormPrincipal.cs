@@ -42,6 +42,11 @@ namespace Laboratorio_final_3
             txt4 = textBoxValorDeEndulzadas.Text;
             txt5 = textBoxValorDeRegalo.Text;
 
+            FormInformacionDeJuego formInformacion = new FormInformacionDeJuego();
+            formInformacion.FechaInicio = dateFechaDeInicio.Value;
+            formInformacion.FechaDescubrimiento = dateFechaDeDescubrimiento.Value;
+
+
             new FormInformacionDeJuego().ShowDialog();
         }
 
@@ -109,6 +114,54 @@ namespace Laboratorio_final_3
             {
                 MessageBox.Show("Primero debes crear los jugadores antes de asignar amigos secretos.");
             }
+        }
+
+        private void textBoxValorDeEndulzadas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permite números, el carácter de retroceso (borrar) y el punto decimal
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+            // Asegura que solo haya un punto decimal en el valor
+            if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxValorDeRegalo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permite números, el carácter de retroceso (borrar) y el punto decimal
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+            // Asegura que solo haya un punto decimal en el valor
+            if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxNumeroDeEndulzadas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permite solo números y el carácter de retroceso (para borrar)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxFrecuenciaDeEndulzadas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permite solo números y el carácter de retroceso (para borrar)
+    if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+    {
+        e.Handled = true;
+    }
         }
     }
 }

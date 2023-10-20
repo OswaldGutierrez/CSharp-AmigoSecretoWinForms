@@ -12,6 +12,10 @@ namespace Laboratorio_final_3
 {
     public partial class FormInformacionDeJuego : Form
     {
+        public DateTime FechaInicio { get; set; }
+        public DateTime FechaDescubrimiento { get; set; }
+
+
         public FormInformacionDeJuego()
         {
             InitializeComponent();
@@ -21,10 +25,17 @@ namespace Laboratorio_final_3
             labelFrecuenciaDeEndulzadas.Text = FormPrincipal.txt3;
             labelValorEndulzada.Text = FormPrincipal.txt4;
             labelValorRegalo.Text = FormPrincipal.txt5;
+            labelFechaInicio.Text = "Fecha de Inicio: " + FechaInicio.ToShortDateString();
+            labelFechaFin.Text = "Fecha de Descubrimiento: " + FechaDescubrimiento.ToShortDateString();
         }
 
         private void FormInformacionDeJuego_Load(object sender, EventArgs e)
         {
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -125,6 +125,7 @@
             this.textBoxNumeroDeEndulzadas.Name = "textBoxNumeroDeEndulzadas";
             this.textBoxNumeroDeEndulzadas.Size = new System.Drawing.Size(100, 20);
             this.textBoxNumeroDeEndulzadas.TabIndex = 21;
+            this.textBoxNumeroDeEndulzadas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumeroDeEndulzadas_KeyPress);
             // 
             // textBoxFrecuenciaDeEndulzadas
             // 
@@ -132,6 +133,7 @@
             this.textBoxFrecuenciaDeEndulzadas.Name = "textBoxFrecuenciaDeEndulzadas";
             this.textBoxFrecuenciaDeEndulzadas.Size = new System.Drawing.Size(100, 20);
             this.textBoxFrecuenciaDeEndulzadas.TabIndex = 20;
+            this.textBoxFrecuenciaDeEndulzadas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFrecuenciaDeEndulzadas_KeyPress);
             // 
             // textBoxValorDeRegalo
             // 
@@ -139,6 +141,7 @@
             this.textBoxValorDeRegalo.Name = "textBoxValorDeRegalo";
             this.textBoxValorDeRegalo.Size = new System.Drawing.Size(100, 20);
             this.textBoxValorDeRegalo.TabIndex = 19;
+            this.textBoxValorDeRegalo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxValorDeRegalo_KeyPress);
             // 
             // textBoxValorDeEndulzadas
             // 
@@ -146,6 +149,7 @@
             this.textBoxValorDeEndulzadas.Name = "textBoxValorDeEndulzadas";
             this.textBoxValorDeEndulzadas.Size = new System.Drawing.Size(100, 20);
             this.textBoxValorDeEndulzadas.TabIndex = 18;
+            this.textBoxValorDeEndulzadas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxValorDeEndulzadas_KeyPress);
             // 
             // dateFechaDeDescubrimiento
             // 

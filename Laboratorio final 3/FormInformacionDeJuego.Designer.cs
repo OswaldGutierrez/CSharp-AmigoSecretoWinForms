@@ -38,6 +38,10 @@
             this.labelFrecuenciaDeEndulzadas = new System.Windows.Forms.Label();
             this.labelValorEndulzada = new System.Windows.Forms.Label();
             this.labelValorRegalo = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.labelFechaInicio = new System.Windows.Forms.Label();
+            this.labelFechaFin = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label5
@@ -84,6 +88,7 @@
             this.label1.Size = new System.Drawing.Size(316, 13);
             this.label1.TabIndex = 10;
             this.label1.Text = "La cantidad de jugadores que hacen parte de \'Amigo Secreto\' es:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // labelCantidadDeJugadores
             // 
@@ -130,11 +135,51 @@
             this.labelValorRegalo.TabIndex = 24;
             this.labelValorRegalo.Text = "label10";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(22, 306);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(108, 13);
+            this.label6.TabIndex = 25;
+            this.label6.Text = "La fecha de inicio es:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(22, 349);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(155, 13);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "La fecha de descubrimiento es:";
+            // 
+            // labelFechaInicio
+            // 
+            this.labelFechaInicio.AutoSize = true;
+            this.labelFechaInicio.Location = new System.Drawing.Point(411, 305);
+            this.labelFechaInicio.Name = "labelFechaInicio";
+            this.labelFechaInicio.Size = new System.Drawing.Size(35, 13);
+            this.labelFechaInicio.TabIndex = 27;
+            this.labelFechaInicio.Text = "label8";
+            // 
+            // labelFechaFin
+            // 
+            this.labelFechaFin.AutoSize = true;
+            this.labelFechaFin.Location = new System.Drawing.Point(411, 348);
+            this.labelFechaFin.Name = "labelFechaFin";
+            this.labelFechaFin.Size = new System.Drawing.Size(35, 13);
+            this.labelFechaFin.TabIndex = 28;
+            this.labelFechaFin.Text = "label9";
+            // 
             // FormInformacionDeJuego
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 335);
+            this.ClientSize = new System.Drawing.Size(558, 413);
+            this.Controls.Add(this.labelFechaFin);
+            this.Controls.Add(this.labelFechaInicio);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.labelValorRegalo);
             this.Controls.Add(this.labelValorEndulzada);
             this.Controls.Add(this.labelFrecuenciaDeEndulzadas);
@@ -164,5 +209,9 @@
         private System.Windows.Forms.Label labelFrecuenciaDeEndulzadas;
         private System.Windows.Forms.Label labelValorEndulzada;
         private System.Windows.Forms.Label labelValorRegalo;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelFechaInicio;
+        private System.Windows.Forms.Label labelFechaFin;
     }
 }
