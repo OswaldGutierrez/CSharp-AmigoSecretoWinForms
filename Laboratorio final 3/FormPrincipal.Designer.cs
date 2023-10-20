@@ -46,12 +46,13 @@
             this.buttonProximaEndulzada = new System.Windows.Forms.Button();
             this.buttonCrearJugadores = new System.Windows.Forms.Button();
             this.buttonAsignarAmigosSecretos = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 30);
+            this.label1.Location = new System.Drawing.Point(27, 143);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 13);
             this.label1.TabIndex = 0;
@@ -60,7 +61,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 82);
+            this.label2.Location = new System.Drawing.Point(27, 195);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 13);
             this.label2.TabIndex = 1;
@@ -69,7 +70,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 134);
+            this.label3.Location = new System.Drawing.Point(27, 247);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 13);
             this.label3.TabIndex = 2;
@@ -78,7 +79,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 290);
+            this.label4.Location = new System.Drawing.Point(27, 403);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(122, 13);
             this.label4.TabIndex = 5;
@@ -87,7 +88,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 238);
+            this.label5.Location = new System.Drawing.Point(27, 351);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(180, 13);
             this.label5.TabIndex = 4;
@@ -96,7 +97,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(23, 186);
+            this.label6.Location = new System.Drawing.Point(27, 299);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(119, 13);
             this.label6.TabIndex = 3;
@@ -105,7 +106,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(23, 342);
+            this.label7.Location = new System.Drawing.Point(27, 455);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(83, 13);
             this.label7.TabIndex = 6;
@@ -113,56 +114,56 @@
             // 
             // dateFechaDeInicio
             // 
-            this.dateFechaDeInicio.Location = new System.Drawing.Point(247, 76);
+            this.dateFechaDeInicio.Location = new System.Drawing.Point(246, 188);
             this.dateFechaDeInicio.Name = "dateFechaDeInicio";
             this.dateFechaDeInicio.Size = new System.Drawing.Size(200, 20);
             this.dateFechaDeInicio.TabIndex = 15;
             // 
             // textBoxNumeroDeEndulzadas
             // 
-            this.textBoxNumeroDeEndulzadas.Location = new System.Drawing.Point(247, 179);
+            this.textBoxNumeroDeEndulzadas.Location = new System.Drawing.Point(246, 292);
             this.textBoxNumeroDeEndulzadas.Name = "textBoxNumeroDeEndulzadas";
             this.textBoxNumeroDeEndulzadas.Size = new System.Drawing.Size(100, 20);
             this.textBoxNumeroDeEndulzadas.TabIndex = 21;
             // 
             // textBoxFrecuenciaDeEndulzadas
             // 
-            this.textBoxFrecuenciaDeEndulzadas.Location = new System.Drawing.Point(247, 235);
+            this.textBoxFrecuenciaDeEndulzadas.Location = new System.Drawing.Point(246, 344);
             this.textBoxFrecuenciaDeEndulzadas.Name = "textBoxFrecuenciaDeEndulzadas";
             this.textBoxFrecuenciaDeEndulzadas.Size = new System.Drawing.Size(100, 20);
             this.textBoxFrecuenciaDeEndulzadas.TabIndex = 20;
             // 
             // textBoxValorDeRegalo
             // 
-            this.textBoxValorDeRegalo.Location = new System.Drawing.Point(247, 335);
+            this.textBoxValorDeRegalo.Location = new System.Drawing.Point(246, 448);
             this.textBoxValorDeRegalo.Name = "textBoxValorDeRegalo";
             this.textBoxValorDeRegalo.Size = new System.Drawing.Size(100, 20);
             this.textBoxValorDeRegalo.TabIndex = 19;
             // 
             // textBoxValorDeEndulzadas
             // 
-            this.textBoxValorDeEndulzadas.Location = new System.Drawing.Point(247, 287);
+            this.textBoxValorDeEndulzadas.Location = new System.Drawing.Point(246, 396);
             this.textBoxValorDeEndulzadas.Name = "textBoxValorDeEndulzadas";
             this.textBoxValorDeEndulzadas.Size = new System.Drawing.Size(100, 20);
             this.textBoxValorDeEndulzadas.TabIndex = 18;
             // 
             // dateFechaDeDescubrimiento
             // 
-            this.dateFechaDeDescubrimiento.Location = new System.Drawing.Point(247, 127);
+            this.dateFechaDeDescubrimiento.Location = new System.Drawing.Point(246, 240);
             this.dateFechaDeDescubrimiento.Name = "dateFechaDeDescubrimiento";
             this.dateFechaDeDescubrimiento.Size = new System.Drawing.Size(200, 20);
             this.dateFechaDeDescubrimiento.TabIndex = 17;
             // 
             // textBoxCantidadDeJugadores
             // 
-            this.textBoxCantidadDeJugadores.Location = new System.Drawing.Point(247, 23);
+            this.textBoxCantidadDeJugadores.Location = new System.Drawing.Point(246, 136);
             this.textBoxCantidadDeJugadores.Name = "textBoxCantidadDeJugadores";
             this.textBoxCantidadDeJugadores.Size = new System.Drawing.Size(100, 20);
             this.textBoxCantidadDeJugadores.TabIndex = 23;
             // 
             // buttonInformacionDeJuego
             // 
-            this.buttonInformacionDeJuego.Location = new System.Drawing.Point(809, 82);
+            this.buttonInformacionDeJuego.Location = new System.Drawing.Point(721, 247);
             this.buttonInformacionDeJuego.Name = "buttonInformacionDeJuego";
             this.buttonInformacionDeJuego.Size = new System.Drawing.Size(175, 23);
             this.buttonInformacionDeJuego.TabIndex = 24;
@@ -172,7 +173,7 @@
             // 
             // buttonProximaEndulzada
             // 
-            this.buttonProximaEndulzada.Location = new System.Drawing.Point(809, 195);
+            this.buttonProximaEndulzada.Location = new System.Drawing.Point(721, 360);
             this.buttonProximaEndulzada.Name = "buttonProximaEndulzada";
             this.buttonProximaEndulzada.Size = new System.Drawing.Size(175, 23);
             this.buttonProximaEndulzada.TabIndex = 25;
@@ -182,7 +183,7 @@
             // 
             // buttonCrearJugadores
             // 
-            this.buttonCrearJugadores.Location = new System.Drawing.Point(809, 30);
+            this.buttonCrearJugadores.Location = new System.Drawing.Point(721, 195);
             this.buttonCrearJugadores.Name = "buttonCrearJugadores";
             this.buttonCrearJugadores.Size = new System.Drawing.Size(175, 23);
             this.buttonCrearJugadores.TabIndex = 26;
@@ -192,7 +193,7 @@
             // 
             // buttonAsignarAmigosSecretos
             // 
-            this.buttonAsignarAmigosSecretos.Location = new System.Drawing.Point(809, 134);
+            this.buttonAsignarAmigosSecretos.Location = new System.Drawing.Point(721, 299);
             this.buttonAsignarAmigosSecretos.Name = "buttonAsignarAmigosSecretos";
             this.buttonAsignarAmigosSecretos.Size = new System.Drawing.Size(175, 23);
             this.buttonAsignarAmigosSecretos.TabIndex = 27;
@@ -200,11 +201,22 @@
             this.buttonAsignarAmigosSecretos.UseVisualStyleBackColor = true;
             this.buttonAsignarAmigosSecretos.Click += new System.EventHandler(this.buttonAsignarAmigosSecretos_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("MS Reference Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(232, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(597, 79);
+            this.label8.TabIndex = 29;
+            this.label8.Text = "AMIGO SECRETO";
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 566);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.buttonAsignarAmigosSecretos);
             this.Controls.Add(this.buttonCrearJugadores);
             this.Controls.Add(this.buttonProximaEndulzada);
@@ -250,6 +262,7 @@
         private System.Windows.Forms.Button buttonProximaEndulzada;
         private System.Windows.Forms.Button buttonCrearJugadores;
         private System.Windows.Forms.Button buttonAsignarAmigosSecretos;
+        private System.Windows.Forms.Label label8;
     }
 }
 
