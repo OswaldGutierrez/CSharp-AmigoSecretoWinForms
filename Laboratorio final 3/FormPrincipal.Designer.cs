@@ -47,6 +47,7 @@
             this.buttonCrearJugadores = new System.Windows.Forms.Button();
             this.buttonAsignarAmigosSecretos = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -238,11 +239,20 @@
             this.label8.TabIndex = 29;
             this.label8.Text = "AMIGO SECRETO";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(31, 541);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(0, 13);
+            this.label9.TabIndex = 30;
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 566);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.buttonAsignarAmigosSecretos);
             this.Controls.Add(this.buttonCrearJugadores);
@@ -291,6 +301,7 @@
         private System.Windows.Forms.Button buttonCrearJugadores;
         private System.Windows.Forms.Button buttonAsignarAmigosSecretos;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }
 
